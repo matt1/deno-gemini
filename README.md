@@ -1,4 +1,4 @@
-[![tests workflow](https://github.com/matt1/deno-gemini/actions/workflows/deno.yml/badge.svg)](https://github.com/matt1/deno-gemini/actions/workflows/deno.yaml)
+[![tests workflow](https://github.com/matt1/deno-gemini/actions/workflows/deno.yaml/badge.svg)](https://github.com/matt1/deno-gemini/actions/workflows/deno.yaml)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/gemini/mod.ts)
 
 # deno-gemini
