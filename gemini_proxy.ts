@@ -28,6 +28,7 @@ export class GeminiProxy {
         for await (const request of this.server) {
           if (!request.url.startsWith('/gemini://')) {
             console.warn(`Bad URL - expected to start with 'gemini://': ${request.url}`);
+            console.log(request);
             request.respond({
               status: 400,
               body: `400 Bad Request: proxy requests only served by '/gemini://' URL.`
