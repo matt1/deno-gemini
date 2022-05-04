@@ -1,9 +1,9 @@
-import {serve, Server, ServerRequest} from "https://deno.land/std/http/server.ts";
+import {serve, Server, ServerRequest} from "https://deno.land/std@0.106.0/http/server.ts";
 import {GeminiClient} from "./gemini_client.ts";
 import { GeminiRequest } from "./gemini_request.ts";
 import { GeminiResponse } from "./gemini_response.ts";
 
-const PORT = 1965;
+const PORT = Number(Deno.env.get('port')) || 1965;
 const URL_PARAM_REGEX = /^\/gemini:\/\/(.*)$/;
 
 /** A simple Gemini-over-HTTPS proxy. */

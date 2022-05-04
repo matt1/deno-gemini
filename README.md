@@ -3,7 +3,7 @@
 
 # deno-gemini
 
-Deno client for the Gemini protocol (based on spec fromhttps://gemini.circumlunar.space/docs/specification.gmi)
+Deno client for the Gemini protocol (based on spec 0.16.1 from https://gemini.circumlunar.space/docs/specification.gmi)
 
 This is in a very early stage of development, and has not udnergone significant testing yet.
 
@@ -12,5 +12,5 @@ This is in a very early stage of development, and has not udnergone significant 
 ## Running locally
 
 ```
-deno run --allow-net --unsafely-ignore-certificate-errors index.ts
+deno run --allow-net --allow-env --unsafely-ignore-certificate-errors index.ts
 ```
