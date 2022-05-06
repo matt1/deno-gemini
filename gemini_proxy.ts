@@ -26,9 +26,15 @@ export class GeminiProxy {
     while (true) {
       try {
         for await (const request of this.server) {
+          console.log(request);
+          if (request.method === 'PRI') {
+            // ignore HTTP/2 PRI request
+            console.log('Ignoring HTTP/2 PRI');
+            continue;
+          }
+          
           if (!request.url.startsWith('/gemini://')) {
             console.warn(`Bad URL - expected to start with 'gemini://': ${request.url}`);
-            console.log(request);
             request.respond({
               status: 400,
               body: `400 Bad Request: proxy requests only served by '/gemini://' URL.`
