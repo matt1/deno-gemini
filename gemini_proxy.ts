@@ -30,6 +30,10 @@ export class GeminiProxy {
           if (request.method === 'PRI') {
             // ignore HTTP/2 PRI request
             console.log('Ignoring HTTP/2 PRI');
+            request.respond({
+              status: 200,
+              body: `ok HTTP/2 PRI`
+            });
             continue;
           }
           
